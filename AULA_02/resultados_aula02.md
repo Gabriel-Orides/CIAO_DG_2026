@@ -53,6 +53,13 @@ OBSERVE: o numero de rotas cresce como (n-1)!  (fatorial)
 4 cidades -> 6 rotas | 5 -> 24 | 6 -> 120 | 10 -> 362880 | 15 -> 87 bilhoes
 =================================================================
 
+Reflexão:
+# Numero de cidades | Rotas avaliadas | Tempo (s) | Melhor custo
+# 4                 |        6        |  0.000099 |  80
+# 5                 |        24       |  0.000085 |  41
+# 6                 |        120      |  0.000944 |  91
+
+Questões:
 
 
  
