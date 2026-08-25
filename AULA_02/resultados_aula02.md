@@ -19,24 +19,24 @@ Resolver uma instância do **Problema da Mochila** por força bruta. O algoritmo
 
 ### Resultados
 
-| Métrica | Resultado |
-|---|---:|
-| Soluções avaliadas | 32 |
-| Tempo de execução | 0,000224 s |
-| Melhor valor encontrado | 9 |
-| Combinação ótima | `(1, 1, 0, 1, 1)` |
+| Métrica                 |         Resultado |
+| ----------------------- | ----------------: |
+| Soluções avaliadas      |                32 |
+| Tempo de execução       |        0,000224 s |
+| Melhor valor encontrado |                 9 |
+| Combinação ótima        | `(1, 1, 0, 1, 1)` |
 
 Na combinação apresentada, `0` significa que o item não foi escolhido e `1` significa que o item foi escolhido.
 
 ### Itens escolhidos
 
-| Item | Peso | Valor |
-|---|---:|---:|
-| Livro | 2 | 3 |
-| Fone | 1 | 2 |
-| Carregador | 1 | 3 |
-| Chocolate | 1 | 1 |
-| **Total** | **5** | **9** |
+| Item       |  Peso | Valor |
+| ---------- | ----: | ----: |
+| Livro      |     2 |     3 |
+| Fone       |     1 |     2 |
+| Carregador |     1 |     3 |
+| Chocolate  |     1 |     1 |
+| **Total**  | **5** | **9** |
 
 ### Questões
 
@@ -74,33 +74,33 @@ O objetivo é encontrar a rota de menor custo que saia da cidade inicial, visite
 
 ### Resultados do código
 
-| Cidades | Rotas avaliadas | Melhor custo | Melhor rota | Tempo de execução |
-|---:|---:|---:|---|---:|
-| 4 | 6 | 80 | `(0, 1, 3, 2, 0)` | 0,000124 s |
-| 5 | 24 | 41 | `(0, 1, 2, 3, 4, 0)` | 0,000110 s |
-| 6 | 120 | 91 | `(0, 1, 3, 4, 5, 2, 0)` | 0,000587 s |
+| Cidades | Rotas avaliadas | Melhor custo | Melhor rota             | Tempo de execução |
+| ------: | --------------: | -----------: | ----------------------- | ----------------: |
+|       4 |               6 |           80 | `(0, 1, 3, 2, 0)`       |        0,000124 s |
+|       5 |              24 |           41 | `(0, 1, 2, 3, 4, 0)`    |        0,000110 s |
+|       6 |             120 |           91 | `(0, 1, 3, 4, 5, 2, 0)` |        0,000587 s |
 
 > Os tempos podem variar entre execuções devido ao sistema operacional, ao processador e aos demais processos ativos no computador.
 
 ### Tabela da reflexão
 
 | Número de cidades | Rotas avaliadas | Tempo medido | Melhor custo |
-|---:|---:|---:|---:|
-| 4 | 6 | 0,000099 s | 80 |
-| 5 | 24 | 0,000085 s | 41 |
-| 6 | 120 | 0,000944 s | 91 |
+| ----------------: | --------------: | -----------: | -----------: |
+|                 4 |               6 |   0,000099 s |           80 |
+|                 5 |              24 |   0,000085 s |           41 |
+|                 6 |             120 |   0,000944 s |           91 |
 
 ### Crescimento do número de rotas
 
 Como a cidade inicial permanece fixa, o número de rotas avaliadas é dado por `(n − 1)!`.
 
 | Número de cidades | Cálculo | Rotas possíveis |
-|---:|---:|---:|
-| 4 | `3!` | 6 |
-| 5 | `4!` | 24 |
-| 6 | `5!` | 120 |
-| 10 | `9!` | 362.880 |
-| 15 | `14!` | 87.178.291.200 |
+| ----------------: | ------: | --------------: |
+|                 4 |    `3!` |               6 |
+|                 5 |    `4!` |              24 |
+|                 6 |    `5!` |             120 |
+|                10 |    `9!` |         362.880 |
+|                15 |   `14!` |  87.178.291.200 |
 
 ### Questões
 
@@ -242,37 +242,37 @@ print(f"Desvio padrão : {np.std(gaps):.2f}%")
 
 ### Resultados por instância
 
-| Instância | Valor ótimo | Valor da gulosa | Gap |
-|---:|---:|---:|---:|
-| 1 | 199 | 199 | 0,0% |
-| 2 | 170 | 170 | 0,0% |
-| 3 | 155 | 155 | 0,0% |
-| 4 | 147 | 147 | 0,0% |
-| 5 | 261 | 261 | 0,0% |
-| 6 | 214 | 214 | 0,0% |
-| 7 | 191 | 187 | 2,1% |
-| 8 | 183 | 183 | 0,0% |
-| 9 | 215 | 206 | 4,2% |
-| 10 | 174 | 174 | 0,0% |
-| 11 | 262 | 262 | 0,0% |
-| 12 | 206 | 206 | 0,0% |
-| 13 | 231 | 231 | 0,0% |
-| 14 | 309 | 309 | 0,0% |
-| 15 | 294 | 294 | 0,0% |
-| 16 | 247 | 247 | 0,0% |
-| 17 | 136 | 134 | 1,5% |
-| 18 | 212 | 212 | 0,0% |
-| 19 | 243 | 243 | 0,0% |
-| 20 | 193 | 193 | 0,0% |
+| Instância | Valor ótimo | Valor da gulosa |  Gap |
+| --------: | ----------: | --------------: | ---: |
+|         1 |         199 |             199 | 0,0% |
+|         2 |         170 |             170 | 0,0% |
+|         3 |         155 |             155 | 0,0% |
+|         4 |         147 |             147 | 0,0% |
+|         5 |         261 |             261 | 0,0% |
+|         6 |         214 |             214 | 0,0% |
+|         7 |         191 |             187 | 2,1% |
+|         8 |         183 |             183 | 0,0% |
+|         9 |         215 |             206 | 4,2% |
+|        10 |         174 |             174 | 0,0% |
+|        11 |         262 |             262 | 0,0% |
+|        12 |         206 |             206 | 0,0% |
+|        13 |         231 |             231 | 0,0% |
+|        14 |         309 |             309 | 0,0% |
+|        15 |         294 |             294 | 0,0% |
+|        16 |         247 |             247 | 0,0% |
+|        17 |         136 |             134 | 1,5% |
+|        18 |         212 |             212 | 0,0% |
+|        19 |         243 |             243 | 0,0% |
+|        20 |         193 |             193 | 0,0% |
 
 ### Resumo estatístico
 
-| Estatística | Resultado |
-|---|---:|
-| Gap médio | 0,39% |
-| Gap mínimo | 0,00% |
-| Gap máximo | 4,19% |
-| Desvio padrão | 1,03% |
+| Estatística   | Resultado |
+| ------------- | --------: |
+| Gap médio     |     0,39% |
+| Gap mínimo    |     0,00% |
+| Gap máximo    |     4,19% |
+| Desvio padrão |     1,03% |
 
 Em **17 das 20 instâncias**, equivalentes a **85% dos testes**, a heurística gulosa encontrou o mesmo valor da solução ótima. Nas três instâncias restantes, os gaps foram pequenos, e o maior deles foi de 4,19%.
 
@@ -286,8 +286,89 @@ Entretanto, a heurística não garante a solução ótima. É preferível gastar
 
 ---
 
-## Conclusão
+## LAB 4 — Modelagem de um Problema Real
 
-Os experimentos demonstram que algoritmos de força bruta conseguem encontrar soluções ótimas, mas apresentam crescimento exponencial ou fatorial, tornando-se inviáveis para entradas grandes.
+**Tema Escolhido:** Montar a lista de compras do mês com orçamento limitado, maximizando a "utilidade".
 
-As heurísticas oferecem uma alternativa mais rápida. Embora não garantam o resultado ótimo, podem produzir soluções muito próximas dele em pouco tempo. No Lab 03, a estratégia gulosa apresentou um gap médio baixo e encontrou o ótimo na maioria das instâncias, mostrando um bom equilíbrio entre qualidade da solução e velocidade de execução.
+---
+
+### 1. Descrição do Problema
+
+No planejamento financeiro mensal, o orçamento destinado às compras de supermercado costuma ser fixo e limitado. O problema consiste em decidir quais produtos colocar no carrinho para maximizar a satisfação (ou necessidade) da família, sem ultrapassar o limite de dinheiro disponível.
+
+Para modelar isso, cada produto possível recebe dois atributos: o seu **custo** (em Reais) e a sua **utilidade** (uma nota de 1 a 10 que representa o quão essencial aquele item é).
+
+### 2. Modelagem Formal
+
+- **O que é uma solução (Representação):**
+  Uma solução candidata é representada por um vetor binário $X = [x_1, x_2, ..., x_n]$, onde $n$ é o número total de produtos na lista.
+  - Se $x_i = 1$, o item $i$ foi selecionado para o carrinho.
+  - Se $x_i = 0$, o item $i$ ficou de fora.
+
+- **Qual é o espaço de busca:**
+  Como cada produto possui 2 estados possíveis (comprar ou não comprar), o tamanho do espaço de busca cresce exponencialmente na base 2. Para $n$ itens, existem $2^n$ soluções possíveis. No nosso código de exemplo (com 8 itens), o espaço de busca é de $2^8 = 256$ soluções possíveis. Em um supermercado real com 100 itens de interesse, teríamos $2^{100}$ combinações.
+
+- **Qual é a função objetivo:**
+  Queremos **maximizar** a utilidade total dos itens levados.
+  $$\text{Maximizar } Z = \sum_{i=1}^{n} (x_i \times \text{utilidade}_i)$$
+
+- **Quais são as restrições:**
+  A soma dos custos dos itens escolhidos não pode ultrapassar o orçamento total definido. Se o limite financeiro for rompido, a solução torna-se inválida.
+  $$\sum_{i=1}^{n} (x_i \times \text{custo}_i) \le \text{Orçamento Maximo}$$
+
+### 3. Classificação do Problema
+
+Este problema é classificado como **"Difícil" (NP-difícil)**, pois ele é uma aplicação direta do clássico _Problema da Mochila 0/1 (Knapsack Problem)_.
+
+**Justificativa:** Conforme o número de itens da lista de compras cresce, o espaço de busca aumenta de forma exponencial ($2^n$). Por conta disso, não existe um algoritmo exato que seja rápido o suficiente (em tempo polinomial) para avaliar todas as combinações possíveis e garantir a solução perfeita para listas muito grandes, sendo necessário o uso de heurísticas na vida real.
+
+---
+
+### 4. Código Python
+
+O script abaixo gera uma solução aleatória (comprando ou não cada item), calcula o valor da função objetivo e checa se as restrições de orçamento foram respeitadas.
+
+```python
+import random
+
+# 1. Definição do problema (Dados de entrada)
+orcamento_maximo = 100.00
+
+# Lista: (Nome do Produto, Custo em R$, Utilidade de 1 a 10)
+produtos = [
+    ("Arroz 5kg", 25.00, 10),
+    ("Feijão 1kg", 8.00, 9),
+    ("Carne 1kg", 35.00, 8),
+    ("Cerveja", 15.00, 4),
+    ("Detergente", 3.00, 6),
+    ("Chocolate", 12.00, 3),
+    ("Legumes", 18.00, 7),
+    ("Café", 16.00, 9)
+]
+
+n_produtos = len(produtos)
+
+# 2. Gerar uma solução aleatória (0 = não compra, 1 = compra)
+solucao_aleatoria = [random.choice([0, 1]) for _ in range(n_produtos)]
+
+# 3. Calcular a Função Objetivo (Utilidade) e Restrições (Custo)
+utilidade_total = 0
+custo_total = 0
+itens_comprados = []
+
+for i in range(n_produtos):
+    if solucao_aleatoria[i] == 1:
+        nome, custo, utilidade = produtos[i]
+        utilidade_total += utilidade
+        custo_total += custo
+        itens_comprados.append(nome)
+
+# 4. Verificar se a solução é factível (respeita restrição)
+solucao_valida = custo_total <= orcamento_maximo
+
+# 5. Imprimir os resultados brutos
+print(f"Vetor: {solucao_aleatoria}")
+print(f"Itens: {itens_comprados}")
+print(f"Utilidade Alcançada: {utilidade_total}")
+print(f"Custo Total: R$ {custo_total:.2f}")
+print(f"Validade: {solucao_valida}")
