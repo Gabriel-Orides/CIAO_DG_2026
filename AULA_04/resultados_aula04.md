@@ -1,7 +1,3 @@
-# Laboratórios de Algoritmos Genéticos (AG) — Otimização Combinatória
-
-Este repositório reúne as atividades práticas da **AULA 04** sobre **Algoritmos Genéticos aplicados a Problemas Combinatórios**, incluindo penalizações, elitismo e balanceamento de carga.
-
 ## Conteúdo
 
 - [Exercício 1 — Análise do Elitismo na Estabilidade Algorítmica](#exercício-1--análise-do-elitismo-na-estabilidade-algorítmica)
