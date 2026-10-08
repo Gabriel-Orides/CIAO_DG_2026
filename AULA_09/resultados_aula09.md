@@ -93,26 +93,30 @@ Saída Gráfica: Visualização dos conjuntos fuzzy e área de defuzzificação 
 # LABORATÓRIO 03 — CONTROLE NEBULOSO (FUZZY) PARA INTENSIDADE DE TREINO
 
 ## Objetivo (Etapa 1: Definição do Problema)
-O problema consiste em determinar a intensidade ideal de um treino físico diário. Hoje, essa decisão costuma ser tomada de forma empírica ou intuitiva pelo próprio atleta ou treinador[cite: 3]. As entradas são numéricas: horas de sono na noite anterior (0 a 12 horas) e Frequência Cardíaca (FC) de repouso ao acordar (40 a 100 bpm)[cite: 3]. A saída é a intensidade sugerida para o treino, variando de 0% a 100%[cite: 3]. A lógica fuzzy é adequada porque conceitos como "dormir pouco" ou "frequência alta" são vagos e não possuem limites exatos[cite: 3]. O modelo proporciona uma transição suave na decisão, permitindo ajustar o treino em dias de fadiga moderada e evitando categorizações extremas do tipo "tudo ou nada"[cite: 3].
+O problema consiste em determinar a intensidade ideal de um treino físico diário. Hoje, essa decisão costuma ser tomada de forma empírica ou intuitiva pelo próprio atleta ou treinador. As entradas são numéricas: horas de sono na noite anterior (0 a 12 horas) e Frequência Cardíaca (FC) de repouso ao acordar (40 a 100 bpm). A saída é a intensidade sugerida para o treino, variando de 0% a 100%. A lógica fuzzy é adequada porque conceitos como "dormir pouco" ou "frequência alta" são vagos e não possuem limites exatos. O modelo proporciona uma transição suave na decisão, permitindo ajustar o treino em dias de fadiga moderada e evitando categorizações extremas do tipo "tudo ou nada".
 
 **Código:** `lab03_aula09.py`
 
 ## Modelagem e Regras (Etapa 2)
 
-**Universo de Discurso e Funções de Pertinência:**[cite: 3]
-* **Sono (Entrada 1):** Unidade em horas (0 a 12)[cite: 3]. Termos linguísticos: `ruim`, `medio`, `bom` (forma geométrica: triângulos)[cite: 3].
-* **FC de Repouso (Entrada 2):** Unidade em bpm (40 a 100)[cite: 3]. Termos linguísticos: `baixa`, `media`, `alta` (forma geométrica: triângulos)[cite: 3].
-* **Intensidade (Saída):** Unidade em percentual (0 a 100)[cite: 3]. Termos linguísticos: `leve`, `moderado`, `intenso` (forma geométrica: triângulos)[cite: 3].
+**Universo de Discurso e Funções de Pertinência:**
+* **Sono (Entrada 1):** Unidade em horas (0 a 12). Termos linguísticos: `ruim`, `medio`, `bom` (forma geométrica: triângulos).
+* **FC de Repouso (Entrada 2):** Unidade em bpm (40 a 100). Termos linguísticos: `baixa`, `media`, `alta` (forma geométrica: triângulos).
+* **Intensidade (Saída):** Unidade em percentual (0 a 100). Termos linguísticos: `leve`, `moderado`, `intenso` (forma geométrica: triângulos).
 
-*(Observação: Cole aqui os prints dos gráficos das funções de pertinência gerados no Colab pelas funções .view() )*[cite: 3]
+<img width="599" height="415" alt="image" src="https://github.com/user-attachments/assets/7ae05bb5-17da-4032-beb4-e1601ff61211" />
+<img width="597" height="445" alt="image" src="https://github.com/user-attachments/assets/f40aa97d-5f45-4092-8668-dafef420e187" />
+<img width="599" height="440" alt="image" src="https://github.com/user-attachments/assets/38e347c4-8610-4227-bcd6-531575759c88" />
+
+
 
 **Base de Regras:**[cite: 3]
-1. **SE** (Sono é Ruim) **OU** (FC é Alta) **ENTÃO** (Intensidade é Leve)[cite: 3]
-2. **SE** (Sono é Ruim) **E** (FC é Baixa) **ENTÃO** (Intensidade é Moderado)[cite: 3]
-3. **SE** (Sono é Médio) **E** (FC é Média) **ENTÃO** (Intensidade é Moderado)[cite: 3]
-4. **SE** (Sono é Médio) **E** (FC é Baixa) **ENTÃO** (Intensidade é Intenso)[cite: 3]
-5. **SE** (Sono é Bom) **E** (FC é Baixa **OU** FC é Média) **ENTÃO** (Intensidade é Intenso)[cite: 3]
-6. **SE** (Sono é Bom) **E** (FC é Alta) **ENTÃO** (Intensidade é Moderado)[cite: 3]
+1. **SE** (Sono é Ruim) **OU** (FC é Alta) **ENTÃO** (Intensidade é Leve)
+2. **SE** (Sono é Ruim) **E** (FC é Baixa) **ENTÃO** (Intensidade é Moderado)
+3. **SE** (Sono é Médio) **E** (FC é Média) **ENTÃO** (Intensidade é Moderado)
+4. **SE** (Sono é Médio) **E** (FC é Baixa) **ENTÃO** (Intensidade é Intenso)
+5. **SE** (Sono é Bom) **E** (FC é Baixa **OU** FC é Média) **ENTÃO** (Intensidade é Intenso)
+6. **SE** (Sono é Bom) **E** (FC é Alta) **ENTÃO** (Intensidade é Moderado)
 
 ## Resultado (Etapa 4: Testes)
 
@@ -131,4 +135,4 @@ Teste 4: Sono = 8h | FC = 80 bpm
  -> Saída do sistema: 52.3% (Esperado: Moderado)
 --------------------------------------------------
 Status de Execução: OK (sem exceções ou erros)
-Saída Gráfica: Visualização dos conjuntos fuzzy e área de defuzzificação gerada
+Saída Gráfica: Visualização dos conjuntos fuzzy e área de defuzzificação gerada.
