@@ -110,7 +110,7 @@ O problema consiste em determinar a intensidade ideal de um treino físico diár
 
 
 
-**Base de Regras:**[cite: 3]
+**Base de Regras:**
 1. **SE** (Sono é Ruim) **OU** (FC é Alta) **ENTÃO** (Intensidade é Leve)
 2. **SE** (Sono é Ruim) **E** (FC é Baixa) **ENTÃO** (Intensidade é Moderado)
 3. **SE** (Sono é Médio) **E** (FC é Média) **ENTÃO** (Intensidade é Moderado)
